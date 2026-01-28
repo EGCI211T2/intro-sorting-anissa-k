@@ -1,22 +1,20 @@
-//
-//  main.cpp
-//  First arg
-//
-//  Created by Mingmanas Sivaraksa on 2/1/2567 BE.
-//
-
 #include <iostream>
+
 using namespace std;
 
-int main(int argc, char * argv[]) {
+#include "sorting.h"
+
+int main(int argc, char * argv[]) 
+{
     
- 
   cout<<"argc is "<<argc<<endl;
     int i,N;
     int *a;
-    for(i=1;i<argc;i++){
-        cout<<"argv[" << i<<"]" <<argv[i]<<endl;
-      
+    a=new int[argc-1];
+    for(i=1;i<argc;i++)
+    {
+        cout<<"argv[" << i <<"]" << argv[i] <<endl;
+        a[i-1]=atoi(argv[i]);
     }
     /* Convert to numbers*/
     N=argc-1;
@@ -27,6 +25,6 @@ int main(int argc, char * argv[]) {
     cout<<"After sorting:";
     display(a,N);
     
-    
+    delete []a;
     return 0;
 }
