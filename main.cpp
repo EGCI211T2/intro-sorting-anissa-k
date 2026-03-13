@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 #include "sorting.h"
 
 int main(int argc, char * argv[]) 
@@ -19,12 +17,11 @@ int main(int argc, char * argv[])
     /* Convert to numbers*/
     N=argc-1;
     cout<<"Before sorting:";
-    display(a,N);
+    display(a,N); //can display only when "a" has a value
     
     sort(a,N);
     cout<<"After sorting:";
     display(a,N);
     
-    delete []a;
     return 0;
 }
