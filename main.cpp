@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "sorting.h"
+#include <cstdlib>
 
 int main(int argc, char * argv[]) 
 {
@@ -22,6 +23,8 @@ int main(int argc, char * argv[])
     sort(a,N);
     cout<<"After sorting:";
     display(a,N);
+
+    delete[] a;
     
     return 0;
 }
